@@ -1,6 +1,6 @@
 # Multi-Pitch Estimation with Nonnegative Matrix Factorization
 
-In this project we will examine how NMF can be used for multi-pitch estimation. This approach was 
+In this project we will examine how NMF (and potentially deep NMF) can be used for multi-pitch estimation. This approach is inspired by traditional MPE methods with the goal of examining a more lightweight and interpretable approach of MPE. This could be potentially expanded towards a fully unsupervised or self-supervised method in the future. 
 
 ## Multi-pitch Estimation (MPE)
 
@@ -10,7 +10,7 @@ In this project we will examine how NMF can be used for multi-pitch estimation. 
 
 Such predictions are useful for general music information retrieval tasks, such as automatic chord estimation, automatic music transcription, genre classification etc.
 
-Multi-pitch estimation has been mostly tackled with supervised methods. Most SOTA methods include Transformer networks which handle both the temporal and spectral relationships between notes ([Toyama et al., 2023](https://arxiv.org/abs/2307.04305)). However, such methods require enormous amounts of labeled data, which is incredibly expensive to develop for music information retrieval tasks. Therefore, recent methods have attempted to approach MPE in an unsupervised or self-supervised way ([Cwitkowitz et al., 2024](https://arxiv.org/abs/2402.15569)), but with little success.
+Multi-pitch estimation has been mostly tackled with supervised methods. Most SOTA methods include CNN and Transformer networks, which handle both the temporal and spectral relationships between notes ([Bittner et al., 2022](https://arxiv.org/abs/2203.09893)),([Toyama et al., 2023](https://arxiv.org/abs/2307.04305)). However, such methods require enormous amounts of labeled data, which is incredibly expensive to develop for music information retrieval tasks. Therefore, recent methods have attempted to approach MPE in an unsupervised or self-supervised way ([Cwitkowitz et al., 2024](https://arxiv.org/abs/2402.15569)), but with little success.
 
 ## Nonnegative Matrix Factorization (NMF)
 
@@ -65,4 +65,4 @@ where $X$ is our input spectrogram and $H = Y$ is equal to the note activation p
 
 * Use $W$ to approximate $Y$ for new, unseen samples.
 * Evaluate this strategy on a simple dataset ([Guitarset](https://guitarset.weebly.com/)) as well as a complex one ([MAESTRO](https://magenta.withgoogle.com/datasets/maestro))
-* **IF I HAVE ENOUGH TIME** expand the methodology for Deep NMF. 
+* **IF I HAVE ENOUGH TIME** expand the methodology to a Deep NMF which expands uppon the activation coefficients. 
