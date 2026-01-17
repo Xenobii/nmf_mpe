@@ -1,0 +1,3 @@
+_target_: train.Trainer
+epochs: ${train.epochs}
+device: ${torch.device}

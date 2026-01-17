@@ -1,0 +1,39 @@
+defaults:
+  - w_init: random
+  - model: nmf
+  - audio_frontend: cqt
+
+  - dataset: maps
+  - dataloader: maps
+  
+  - optimizer: adam
+  - scheduler: cosine
+  - loss: cross_entropy 
+  
+  - trainer: trainer
+  
+  - _self_
+
+data: 
+  T_max: ${dims.T}
+  sr: 16384
+  hop_length: 256
+
+train:
+  epochs: 2
+  valid_size: 0.1
+  batch_size: 16
+  num_workers: 4
+  shuffle: true
+
+dims:
+  T: 256 
+  N: 128
+  F: 264
+
+torch:
+  device: cuda
+  seed: 42
+  cudnn_benchmark: true
+  cudnn_deterministic: false
+  tf32: true

@@ -1,0 +1,3 @@
+_target_: nmf.model.random_init
+N: ${dims.N}
+F: ${dims.F}

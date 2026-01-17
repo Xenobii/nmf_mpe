@@ -1,0 +1,7 @@
+_target_: nmf.frontend.CQT
+
+sr: ${data.sr}
+hop_length: ${data.hop_length}
+fmin: 27.7
+n_bins: ${dims.F}
+bins_per_semitone: 3

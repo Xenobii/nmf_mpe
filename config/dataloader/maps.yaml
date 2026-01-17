@@ -1,0 +1,5 @@
+_target_: nmf.dataset.MAPSDataloader
+
+batch_size: ${train.batch_size}
+num_workers: ${train.num_workers}
+shuffle: ${train.shuffle}
